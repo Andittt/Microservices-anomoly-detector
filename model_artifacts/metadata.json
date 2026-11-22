@@ -1,0 +1,83 @@
+{
+  "features": [
+    "checkout_latency_p95",
+    "checkout_error_rate",
+    "checkout_rps",
+    "checkout_cpu",
+    "checkout_memory_mb",
+    "inventory_latency_p95",
+    "inventory_error_rate",
+    "inventory_rps",
+    "inventory_cpu",
+    "inventory_memory_mb",
+    "payment_latency_p95",
+    "payment_error_rate",
+    "payment_rps",
+    "payment_cpu",
+    "payment_memory_mb"
+  ],
+  "seq_len": 12,
+  "sample_interval": 5.0,
+  "hidden": 32,
+  "latent": 16,
+  "threshold": 0.41736008639539474,
+  "threshold_rule": "max(mean + 4*std, 1.5 * max) of held-out healthy validation window scores",
+  "val_score_mean": 0.1208118842999113,
+  "val_score_std": 0.057773430905229295,
+  "val_score_max": 0.2782400575969298,
+  "train_windows_over_threshold": 0.0,
+  "feature_error_mean": [
+    0.0009620323075010813,
+    0.00020969507687599722,
+    0.5261207647417219,
+    0.05612952793929819,
+    0.07483953527967505,
+    0.047270233803718,
+    0.0002575052315875203,
+    0.5344692647282021,
+    0.010638721748414941,
+    0.010360653961522796,
+    0.00038566806552610763,
+    0.00037161170224831434,
+    0.5263437484098453,
+    0.009761204666787026,
+    0.014058096835745038
+  ],
+  "feature_error_p99": [
+    0.003134500976183162,
+    0.000701089289334959,
+    1.2220420056067407,
+    0.10218846817918385,
+    0.15873584634861887,
+    0.08449395099635094,
+    0.0013423277443435845,
+    1.2279420074600478,
+    0.02052603443884996,
+    0.0282753833782061,
+    0.0012985179408223255,
+    0.0013460760081379574,
+    1.216831489349335,
+    0.018199873663397072,
+    0.04096213844124981
+  ],
+  "trace_baseline": {
+    "n": 521,
+    "self_ms": {
+      "checkout": 9.52953550863723,
+      "inventory": 39.03411516314777,
+      "payment": 54.12418809980799
+    },
+    "error_origin_rate": {
+      "checkout": 0.0,
+      "inventory": 0.0,
+      "payment": 0.0
+    }
+  },
+  "rows": 180,
+  "train_rows": 135,
+  "val_rows": 45,
+  "epochs_run": 87,
+  "best_val_loss": 0.12081187963485718,
+  "trained_at": "2026-11-17 12:30:03",
+  "training_seconds": 1.6
+}

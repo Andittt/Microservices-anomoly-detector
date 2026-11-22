@@ -1,0 +1,81 @@
+{
+  "phases": [
+    {
+      "name": "healthy baseline",
+      "kind": "healthy",
+      "start": 1794898870.620925,
+      "end": 1794899050.6245692,
+      "true_service": null
+    },
+    {
+      "name": "inventory latency +1.5 s",
+      "kind": "fault",
+      "start": 1794899050.657822,
+      "end": 1794899170.663092,
+      "true_service": "inventory"
+    },
+    {
+      "name": "recovery 1",
+      "kind": "healthy",
+      "start": 1794899170.699689,
+      "end": 1794899290.704949,
+      "true_service": null
+    },
+    {
+      "name": "payment 30% errors",
+      "kind": "fault",
+      "start": 1794899290.737737,
+      "end": 1794899410.747663,
+      "true_service": "payment"
+    },
+    {
+      "name": "recovery 2",
+      "kind": "healthy",
+      "start": 1794899410.7659159,
+      "end": 1794899530.776185,
+      "true_service": null
+    }
+  ],
+  "results": {
+    "healthy": {
+      "windows": 56,
+      "duration_s": 280,
+      "false_alerts": 0,
+      "false_positive_rate": 0.0
+    },
+    "faults": [
+      {
+        "name": "inventory latency +1.5 s",
+        "true_service": "inventory",
+        "windows": 24,
+        "duration_s": 120,
+        "detected": true,
+        "detection_delay_s": 8.5,
+        "detection_rate": 0.9583333333333334,
+        "localization_accuracy": 1.0,
+        "trace_agreement": 1.0,
+        "suspected_counts": {
+          "checkout": 0,
+          "inventory": 23,
+          "payment": 0
+        }
+      },
+      {
+        "name": "payment 30% errors",
+        "true_service": "payment",
+        "windows": 24,
+        "duration_s": 120,
+        "detected": true,
+        "detection_delay_s": 8.4,
+        "detection_rate": 0.9583333333333334,
+        "localization_accuracy": 1.0,
+        "trace_agreement": 1.0,
+        "suspected_counts": {
+          "checkout": 0,
+          "inventory": 0,
+          "payment": 23
+        }
+      }
+    ]
+  }
+}

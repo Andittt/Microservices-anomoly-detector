@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+logs/
+tmp/
+data/live_log.csv
+data/fault_log.csv

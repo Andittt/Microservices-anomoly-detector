@@ -1,0 +1,13 @@
+{
+  "n": 521,
+  "self_ms": {
+    "checkout": 9.52953550863723,
+    "inventory": 39.03411516314777,
+    "payment": 54.12418809980799
+  },
+  "error_origin_rate": {
+    "checkout": 0.0,
+    "inventory": 0.0,
+    "payment": 0.0
+  }
+}
